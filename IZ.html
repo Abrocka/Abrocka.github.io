@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Индивидуальные задания</title>
+</head>
+<style>
+    body{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    h1{
+        font-size: 15px;
+    }
+    .button{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        background-color: #e3e300;
+        color:rgb(0, 0, 0);
+        border: 2px solid #9d9d00;
+    }
+    .button:hover{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        background-color: #858500;
+        color:rgb(0, 0, 0);
+        border: 2px solid #444400;
+    }
+</style>
+<script>
+    function calcD() {
+        if(_i1.value<_i2.value)
+            alert(_i1.value);
+        if(_i2.value<_i1.value)
+            alert(_i2.value);
+        if(_i2.value==_i1.value)
+            alert("Они равны");
+    }
+    function sayMyName() {
+        let name = "Макс";
+        let admin;
+        admin = name;
+        alert(admin);
+    }
+    function oldyAreHere() {
+        var year = prompt('Сколько вам лет?','Введите сюда ваш возраст');
+        var tochno = confirm('Вы уверены, что вам '+year+'?');
+        if(!tochno)
+            oldyAreHere();
+        if(tochno)
+            alert('Принято, выполняющему '+year+' лет');
+    }
+</script>
+
+<body>
+    <h1>
+        Мини анкета
+    </h1>
+    <div>
+        <h1>№1</h1>
+        <input type="text" size="10" onchange="Check()" id = "_i1">
+        <input type="text" size="10" onchange="Check()" id = "_i2">
+        <input type="submit" class="button" value="Проверить" onclick="calcD()">
+        <h1>№2</h1>
+        <input type="submit" class="button" value="Спросить про имя" onclick="sayMyName()">
+        <h1>№3</h1>
+        <input type="submit" class="button" value="Спросить про возраст" onclick="oldyAreHere()">
+    </div>
+</body>
+</html>
